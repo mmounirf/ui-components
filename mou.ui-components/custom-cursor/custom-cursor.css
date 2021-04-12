@@ -1,0 +1,19 @@
+html, body {
+    cursor: none;
+}
+
+.muc__custom-cursor {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: var(--muc-custom-cursor-color);
+    width: var(--muc-custom-cursor-width);
+    height: var(--muc-custom-cursor-height);
+    backface-visibility: hidden;
+    will-change: transform;
+    pointer-events: none;
+    visibility: hidden;
+    transform: translate3d(calc(var(--muc-custom-cursor-x) - var(--muc-custom-cursor-width) / 2), calc(var(--muc-custom-cursor-y) - var(--muc-custom-cursor-height) / 2), 0)
+}
