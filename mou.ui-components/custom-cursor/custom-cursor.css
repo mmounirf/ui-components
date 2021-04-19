@@ -14,6 +14,6 @@ html, body {
     backface-visibility: hidden;
     will-change: transform;
     pointer-events: none;
-    visibility: hidden;
+    visibility: var(--muc-custom-cursor-visible);
     transform: translate3d(calc(var(--muc-custom-cursor-x) - var(--muc-custom-cursor-width) / 2), calc(var(--muc-custom-cursor-y) - var(--muc-custom-cursor-height) / 2), 0)
 }

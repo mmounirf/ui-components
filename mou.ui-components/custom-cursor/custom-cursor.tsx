@@ -29,12 +29,16 @@ export function CustomCursor({ elementSelectors, color = '#f44336', width = 30, 
   const [isMoved, setIsMoved] = useState(false);
   const [coords, setCoords] = useState({ x: 0, y: 0 });
 
-  const cursorStyles = {
-    '--muc-custom-cursor-x': `${coords.x}px`,
-    '--muc-custom-cursor-y': `${coords.y}px`,
+  const initialStyles = {
+    '--muc-custom-cursor-visible': isMoved ? 'visible' : 'hidden',
     '--muc-custom-cursor-color': color,
     '--muc-custom-cursor-width': `${width}px`,
-    '--muc-custom-cursor-height': `${height}px`,
+    '--muc-custom-cursor-height': `${height}px`
+  } as CSSProperties;
+
+  const cursorPosition = {
+    '--muc-custom-cursor-x': `${coords.x}px`,
+    '--muc-custom-cursor-y': `${coords.y}px`,
   } as CSSProperties;
 
   const MouseMoveHandler = useCallback(({ clientX, clientY, target }) => {
@@ -44,13 +48,9 @@ export function CustomCursor({ elementSelectors, color = '#f44336', width = 30, 
 
   useEventListener(MOUSE_EVENTS.MOVE, MouseMoveHandler);
 
-  useLayoutEffect(() => {
-    customCursorRef.current.style.visibility = isMoved ? 'visible' : 'hidden';
-  }, [isMoved])
-
   return (
-    <Fragment>
-      <div className="muc__custom-cursor" style={cursorStyles} ref={customCursorRef} />
-    </Fragment>
+    <div style={initialStyles}>
+      <div className="muc__custom-cursor" style={cursorPosition} ref={customCursorRef} />
+    </div>
   );
 }
