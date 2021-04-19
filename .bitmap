@@ -2,8 +2,8 @@
 
 {
     "custom-cursor": {
-        "scope": "",
-        "version": "",
+        "scope": "mou.ui-components",
+        "version": "0.0.1",
         "mainFile": "index.ts",
         "rootDir": "mou.ui-components/custom-cursor"
     },

@@ -1,11 +1,10 @@
 import React from 'react';
-import { render } from '@testing-library/react';
-import { BasicCustomCursor } from './custom-cursor.composition';
+import { render, screen } from '@testing-library/react';
+import { CustomCursor } from './';
 
 describe('custom-cursor', () => {
-  it('should render with the correct text', () => {
-    const { getByText } = render(<BasicCustomCursor />);
-    const rendered = getByText('hello from CustomCursor');
-    expect(rendered).toBeTruthy();
+  it('should render', () => {
+    const { container } = render(<CustomCursor />);
+    expect(container).toBeDefined();
   });
 });
