@@ -1,0 +1,12 @@
+{
+  "name": "ui-components",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "git@github.com:mmounirf/ui-components.git",
+  "author": "Mou <m.mounir.f@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "preinstall": "sh ./install.sh",
+    "start": "bbit start"
+  }
+}
