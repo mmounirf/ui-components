@@ -7,5 +7,5 @@
         "mainFile": "index.ts",
         "rootDir": "mou.ui-components/custom-cursor"
     },
-    "version": "1.0.53"
+    "version": "1.0.61"
 }
