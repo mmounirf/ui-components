@@ -6,6 +6,7 @@
   "license": "MIT",
   "scripts": {
     "preinstall": "sh ./install.sh",
-    "start": "bbit start"
+    "start": "bbit start",
+    "deploy": "git push origin :gh-pages && git subtree push --prefix public/bit origin gh-pages"
   }
 }
